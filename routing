@@ -1,0 +1,59 @@
+https://blog.logrocket.com/react-router-v6-guide/
+
+// <header className="flex w-[100vw] h-16 justify-between items-center bg-[#C1E8FF]">
+  //   <nav className="flex justify-between items-center text-black">
+  //     <Link to="/" className="text-3xl mx-4 font-bold text-[#060606]">
+  //       MrBri<span className="text-[#1057E0]">Cool</span>
+  //     </Link>
+  //     <div className="hidden md:flex gap-[20vw] items-center">
+  //       <div>
+  //         <Link to="/" className="text-blue-900 font-bold hover:underline">
+  //           Devenir MrBriCool
+  //         </Link>
+  //       </div>
+  //       <div>
+  //         <Link to="/">
+  //           <button className="text-white font-bold text-center bg-[#1057E0] hover:bg-blue-800 outline-none rounded-3xl text-sm h-[6vh] w-[16vw] focus:outline-none">
+  //             Trouver un Bricoleur
+  //           </button>
+  //         </Link>
+  //       </div>
+  //       <div>
+  //         <Link to="/">
+  //           <button className="text-black font-bold text-center bg-white hover:bg-gray-100 outine-none rounded-3xl text-sm h-[6vh] w-[8vw] mr-3 focus:outline-none">
+  //             S'inscrire
+  //           </button>
+  //         </Link>
+  //         <Link to="home">
+  //           <button className="text-black font-bold text-center bg-white hover:bg-gray-100 outine-none rounded-3xl text-sm h-[6vh] w-[8vw] focus:outline-none">Se Connecter</button>
+  //         </Link>
+  //       </div>
+  //     </div>
+  //   </nav>
+
+  <div onClick={handleNav} className="block md:hidden">
+    {!nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
+  </div>
+  <div
+    className={
+      !nav
+        ? "fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#338cf3] ease-in-out duration-500"
+        : "fixed left-[-100%]"
+    }
+  >
+  <Link to="/" className="text-3xl font-bold text-black m-4">
+    MrBri<span className="text-[#1057E0]">Cool</span>
+  </Link>
+  <ul className="uppercase p-4">
+    <li className="p-4 border-b border-gray-600">
+      <Link to="/">Trouver un Bricoleur</Link>
+    </li>
+    <li className="p-4 border-b border-gray-600">
+      <Link to="/">S'inscrire</Link>
+    </li>
+    <li className="p-4">
+      <Link to="home">Se Connecter</Link>
+    </li>
+  </ul>
+</div>
+  // </header>
